@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Basic Calculator made using HTML, CSS and JS.">
+	<meta name=”robots” content=”index, follow”>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Calculator using HTML" />
+	<meta property="og:description" content="A basic Calculator made using HTML, CSS and Vanilla JS" />
+	<meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3616/3616624.png" />
+	<meta property="og:url" content="aroproduction.github.io/calculator-html" />
+	<meta property="og:site_name" content="calculator-html" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="stylesheet" href="./css/calculator.css">
+	<title>Calculator</title>
+</head>
+<body>
+	<form name="a">
+		<div class="container">
+			<input name="b" placeholder="SOLUTION:" class="textbox"><br>
+			<input type="button" class="btn" name="btna" value="(" onClick="dis(btna.value)"/>
+			<input type="button" class="btn" name="btnb" value=")" onClick="dis(btnb.value)"/>
+			<input type="reset" class="btn" value="CE"/>
+			<input type="button" class="btn" value="Back" onClick="BS()" style="font-size: 27px;"/><br>
+			<input type="button" class="btn" name="btn9" value="9" onClick="dis(btn9.value)"/>
+			<input type="button" class="btn" name="btn8" value="8" onClick="dis(btn8.value)"/>
+			<input type="button" class="btn" name="btn7" value="7" onClick="dis(btn7.value)"/>
+			<input type="button" class="btn" name="btnadd" value="+" onClick="dis(btnadd.value)"/><br>
+			<input type="button" class="btn" name="btn6" value="6" onClick="dis(btn6.value)"/>
+			<input type="button" class="btn" name="btn5" value="5" onClick="dis(btn5.value)"/>
+			<input type="button" class="btn" name="btn4" value="4" onClick="dis(btn4.value)"/>
+			<input type="button" class="btn" name="btnsub" value="-" onClick="dis(btnsub.value)"/><br>
+			<input type="button" class="btn" name="btn3" value="3" onClick="dis(btn3.value)"/>
+			<input type="button" class="btn" name="btn2" value="2" onClick="dis(btn2.value)"/>
+			<input type="button" class="btn" name="btn1" value="1" onClick="dis(btn1.value)"/>
+			<input type="button" class="btn" name="btnmul" value="*" onClick="dis(btnmul.value)"/><br>
+			<input type="button" class="btn" name="btn0" value="0" onClick="dis(btn0.value)"/>
+			<input type="button" class="btn" name="btndot" value="." onClick="dis(btndot.value)"/>
+			<input type="button" class="btn" name="btneq" value="=" onClick="b.value=eval(b.value)"/>
+			<input type="button" class="btn" name="btndiv" value="/" onClick="dis(btndiv.value)"/><br>
+		</div>
+	</form>
+	<script>
+		function dis(y){
+			a.b.value=a.b.value+y
+		}
+		// BackSpace button function 
+		function BS(){
+			a.b.value=a.b.value.slice(0,a.b.value.length-1)
+		}
+	</script>
+</body>
+</html>
